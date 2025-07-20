@@ -99,19 +99,14 @@ const Upload = () => {
       <section className="main-section">
         <div className="page-heading py-16">
           <h1>Smart feedback for your dream job</h1>
-
           {isProcessing ? (
             <>
               <h2>{statusText}</h2>
               <img src="/images/resume-scan.gif" className="w-full" />
             </>
           ) : (
-            <h2>
-              Drop your resume for an ATS(Applicant Tracking System) score and
-              improvement tips
-            </h2>
+            <h2>Drop your resume for an ATS score and improvement tips</h2>
           )}
-
           {!isProcessing && (
             <form
               id="upload-form"
@@ -145,6 +140,7 @@ const Upload = () => {
                   id="job-description"
                 />
               </div>
+
               <div className="form-div">
                 <label htmlFor="uploader">Upload Resume</label>
                 <FileUploader onFileSelect={handleFileSelect} />
